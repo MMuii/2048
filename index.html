@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>2048</title>
+    <meta name="Simple 2048 game" content="2048">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="js/main.js"></script>
+    
+    <div class="restart">
+        <img src="img/restart.png" alt="restart icon" class="restart_icon">
+    </div>
+
+    <div class="score">
+        <p>Score:</p>
+        <p class="score_number">0</p>
+    </div>
+
+    <div class="playfield_background">
+        <div class="playfield_grid">
+            <div class="playfield_grid_cell" id="cell_0_0"></div>
+            <div class="playfield_grid_cell" id="cell_0_1"></div>
+            <div class="playfield_grid_cell" id="cell_0_2"></div>
+            <div class="playfield_grid_cell" id="cell_0_3"></div>
+            <div class="playfield_grid_cell" id="cell_1_0"></div>
+            <div class="playfield_grid_cell" id="cell_1_1"></div>
+            <div class="playfield_grid_cell" id="cell_1_2"></div>
+            <div class="playfield_grid_cell" id="cell_1_3"></div>
+            <div class="playfield_grid_cell" id="cell_2_0"></div>
+            <div class="playfield_grid_cell" id="cell_2_1"></div>
+            <div class="playfield_grid_cell" id="cell_2_2"></div>
+            <div class="playfield_grid_cell" id="cell_2_3"></div>
+            <div class="playfield_grid_cell" id="cell_3_0"></div>
+            <div class="playfield_grid_cell" id="cell_3_1"></div>
+            <div class="playfield_grid_cell" id="cell_3_2"></div>
+            <div class="playfield_grid_cell" id="cell_3_3"></div>
+        </div>
+        <div class="tile_grid">
+        </div>
+    </div>
+
+    <div class="winscreen">
+        <p>Game over!<br>You won!</p>
+        <button class="playAgainWin">Play Again</button>
+        <button class="continue">Continue</button>
+    </div>
+
+    <div class="losescreen">
+        <p>Game over!<br>You lost!</p>
+        <button class="playAgainLose">Play Again</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+:root {
+    --tile-size: 117.5px;
+    --grid-gap: 10px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: red; 
+}
+
+.playfield {
+    &_background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: darkgray;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+    }
+
+    &_grid {
+        height: 100%;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: var(--grid-gap);
+
+        &_cell {
+            background-color: gray;
+        }
+    }
+}
+
+.tile_grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr 1fr;
+    // grid-gap: var(--grid-gap);
+}
+
+.tile {
+    position: absolute;
+    height: 117.5px;
+    width: 117.5px;
+    background-color: orange;
+    transition: all .2s;
+
+    display: flex;
+    color: #fff;
+    // font-size: 5rem;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: center;
+
+    &--2, &--4, &--8 {
+        font-size: 5rem;
+    }
+
+    &--16, &--32, &--64 {
+        font-size: 4rem;
+    }
+
+    &--128, &--256, &--512 {
+        font-size: 3rem;
+    }
+
+    &--1024, &--2048, &--4096, &--8192 {
+        font-size: 2.5rem;
+    }
+
+    &--2 {
+        background-color: #ffb84d;
+    }
+
+    &--4 {
+        background-color: #ffa31a;
+    }
+
+    &--8 {
+        background-color: #e68a00;
+    }
+
+    &--16 {
+        background-color: #b36b00;
+    }
+
+    &--32 {
+        background-color: #993300;
+    }
+
+    &--64 {
+        background-color: #990000;
+    }
+
+    &--128 {
+        background-color: #cc0000;
+    }
+
+    &--256 {
+        background-color: #ff4d4d;
+    }
+
+    &--512 {
+        background-color: #ff4da6;
+    }
+
+    &--1024 {
+        background-color: #cc99ff;
+    }
+
+    &--2048 {
+        background-color: #80aaff;
+    }
+}
+
+.winscreen {
+    display: none;
+    background-color: #fff;
+    border: solid #000 3px;
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+
+    p {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    button {
+        border: none;
+        background-color: #fff;
+        width: 250px;
+        font-family: 'Roboto', sans-serif;
+        margin: 1rem;
+        cursor: pointer;
+    }
+}
+
+.losescreen {
+    display: none;
+    background-color: #fff;
+    border: solid #000 3px;
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+
+    p {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    button {
+        border: none;
+        background-color: #fff;
+        width: 250px;
+        font-family: 'Roboto', sans-serif;
+        margin: 1rem;
+        cursor: pointer;
+    }
+}
+
+.score {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    left: 50%;
+    top: 19%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+}
+
+.restart {
+    position: absolute;
+    width: 500px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: flex-end;
+
+    &_icon {
+        cursor: pointer;
+        max-height: 50px;
+        max-width: 50px;
+    }
+}
+
+//117.5px ma tile
