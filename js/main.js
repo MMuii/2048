@@ -487,7 +487,6 @@ class GameController {
         this.activeTiles = [];
 
         this.spawnTile(2);
-        this.spawnTile(2);
     }
 
     checkForLose() {
@@ -562,6 +561,10 @@ $(document).ready(function () {
                 }
             }, 150);
         }
+    });
+
+    $('.restart').on('click', function () {
+        gameController.restartGame();
     });
 
     $('.playAgainWin').on('click', function () {
