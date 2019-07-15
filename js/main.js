@@ -559,7 +559,7 @@ $(document).ready(function () {
 
                     gameController.tilesMoved = 0;
                 }
-            }, 150);
+            }, 200);
         }
     });
 
